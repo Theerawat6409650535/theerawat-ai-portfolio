@@ -1,5 +1,5 @@
 # Weekly Log
-- 📅 Week: 
+- 📅 Week: 1
 - ✅ Done:
 - 📖 Learned:
 - ❓ Blockers:
