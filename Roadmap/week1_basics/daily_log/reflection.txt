@@ -1,0 +1,6 @@
+Today, I learned about basic c++ programming such as what c++ come form, elements in program, 
+steps from creating to executing code, data types and limits. By the way, Today is the first day
+of planning to become an AI engineer. I'm very excited to follow my schedule strictly, but I'm
+pretty worried in my plan that is the right or good way to be an AI engineer? However, I believe
+that the plan is appropriate to me in the limit time. In the next reflection, I will talk about
+knowledge that I learned. TFR!!!
