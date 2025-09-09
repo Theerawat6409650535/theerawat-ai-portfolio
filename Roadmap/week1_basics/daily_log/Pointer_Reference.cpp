@@ -37,4 +37,5 @@ int main(int argc, char **argv)
 
     // call by pointer change value in num3 because x is pointer that refer to num3
     cout << num3 << " become to " << num3 << endl;
+    return 0;
 }

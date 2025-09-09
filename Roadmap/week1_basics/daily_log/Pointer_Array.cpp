@@ -36,4 +36,5 @@ int main(int argc, char **argv)
     // pass array into pointer (access first element in default)
     setZero(nums, size);
     print(nums, size);
+    return 0;
 }

@@ -1,6 +1,16 @@
+8 Sep 2025
 Today, I learned about basic c++ programming such as what c++ come form, elements in program, 
 steps from creating to executing code, data types and limits. By the way, Today is the first day
 of planning to become an AI engineer. I'm very excited to follow my schedule strictly, but I'm
 pretty worried in my plan that is the right or good way to be an AI engineer? However, I believe
 that the plan is appropriate to me in the limit time. In the next reflection, I will talk about
 knowledge that I learned. TFR!!!
+
+9 Sep 2025
+Today, I learned and review about c++ programming such as what is c++, all of data types, how to 
+allocate/deallocate memory with new/delete, file object, some of useful instruction, and process
+of build c++ programming. To be honest, I also should learn about calculus, but I stayed up very late
+at last night. However, I don't waste any time for this obstacle things and I take a lot of time 
+for reviewing c++ for quiz in tomorrow. I'm very anxiety for it, although I know that no one gonna be perfect.
+Yeah, it is a human being and I'm a human, human has mistake. Let's move it on and follow a plan.
+TFR Have fun !!!
