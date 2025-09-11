@@ -5,9 +5,9 @@
 void ModifiedLinkedList::add(double n)
 {
     Node *node = new Node(n);
-    counter++;
     node->next = head;
     head = node;
+    counter++;
     if (counter % 2 == 0 || counter == 1)
     {
         mid = node;
@@ -33,11 +33,11 @@ void ModifiedLinkedList::getData(double *&data, int &size)
 
 ModifiedLinkedList *ModifiedLinkedList::clone()
 {
-    ModifiedLinkedList *cloneObj = new ModifiedLinkedList;
+    ModifiedLinkedList *cloneObj = new ModifiedLinkedList();
     double *data;
     int size;
     this->getData(data, size);
-    for (int i = 0; i < size; i++)
+    for (int i = size - 1; i >= 0; i--)
     {
         cloneObj->add(data[i]);
     }
@@ -62,31 +62,26 @@ ModifiedLinkedList *ModifiedLinkedList::mergeWith(ModifiedLinkedList *obj)
 
 int ModifiedLinkedList::cut(int pos, ModifiedLinkedList *&part1, ModifiedLinkedList *&part2)
 {
-    if (pos < 1 || pos > counter)
+    ModifiedLinkedList *cloneList = this->clone();
+    ModifiedLinkedList *part1 = new ModifiedLinkedList();
+    ModifiedLinkedList *part2 = new ModifiedLinkedList();
+    Node *temp = cloneList->head;
+    part1->head = temp;
+    for (int i = 0; i < counter; i++)
     {
-        return -1;
-    }
-    else
-    {
-        ModifiedLinkedList *part1 = new ModifiedLinkedList;
-        ModifiedLinkedList *part2 = new ModifiedLinkedList;
-        double *data;
-        int size;
-        this->getData(data, size);
-        for (int i = 0; i < size; i++)
+        if (i == pos - 1)
         {
-            if (i < pos)
-            {
-                part1->add(data[i]);
-            }
-            else
-            {
-                part2->add(data[i]);
-            }
+            Node *tmpTemp = temp;
+            tmpTemp->next = NULL;
         }
-        delete[] data;
-        return 0;
+        else if (i == pos)
+        {
+            part2->head = temp;
+        }
+        temp = temp->next;
     }
+    delete cloneList;
+    return 0;
 }
 
 void ModifiedLinkedList::removeAllNodes()
@@ -112,6 +107,7 @@ void ModifiedLinkedList::print()
         {
             std::cout << node->data << " ";
         }
+        node = node->next;
     }
-    std::cout << ", Mid = :" << mid->data;
+    std::cout << ", Mid = :" << mid->data << std::endl;
 }

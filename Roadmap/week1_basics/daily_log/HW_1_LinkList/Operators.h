@@ -1,6 +1,6 @@
 #ifndef OPERATORS_H
 #define OPERATORS_H
-#include <string>
+
 class Operators
 {
 public:
@@ -10,11 +10,13 @@ public:
     void printCurrentList();
     void printHistory();
     void makeList(double[], int);
+    void clearTopList();
+    void clearTopOp();
     bool isEmpty();
     Operators(int sSize = 20)
     {
         ops = new Op *[sSize]();
-        lists = new ModifiedLinkedList *[sSize];
+        lists = new ModifiedLinkedList *[sSize]();
         topOp = -1;
         topList = -1;
         maxTopLists = sSize;
