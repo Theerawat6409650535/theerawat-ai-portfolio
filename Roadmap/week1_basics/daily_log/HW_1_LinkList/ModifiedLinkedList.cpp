@@ -33,7 +33,7 @@ void ModifiedLinkedList::getData(double *&data, int &size)
 
 ModifiedLinkedList *ModifiedLinkedList::clone()
 {
-    ModifiedLinkedList *cloneObj = new ModifiedLinkedList();
+    ModifiedLinkedList *cloneObj = new ModifiedLinkedList;
     double *data;
     int size;
     this->getData(data, size);
@@ -55,7 +55,7 @@ ModifiedLinkedList *ModifiedLinkedList::mergeWith(ModifiedLinkedList *obj)
         temp = temp->next;
     }
     temp->next = newList->head;
-    newList->head = obj->head;
+    newList->head = objList->head;
     delete objList;
     return newList;
 }
@@ -84,6 +84,7 @@ int ModifiedLinkedList::cut(int pos, ModifiedLinkedList *&part1, ModifiedLinkedL
                 part2->add(data[i]);
             }
         }
+        delete[] data;
         return 0;
     }
 }

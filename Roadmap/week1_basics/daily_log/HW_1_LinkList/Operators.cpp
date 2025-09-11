@@ -4,7 +4,7 @@
 
 void Operators::makeList(double data[], int size)
 {
-    if (!this->isEmpty())
+    if (this->isEmpty())
     {
         ModifiedLinkedList *newlist = new ModifiedLinkedList;
 
@@ -15,6 +15,6 @@ void Operators::makeList(double data[], int size)
     }
 }
 
-void Operators::isEmpty()
+bool Operators::isEmpty()
 {
 }

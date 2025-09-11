@@ -1,5 +1,6 @@
 #ifndef OPERATORS_H
 #define OPERATORS_H
+#include <string>
 class Operators
 {
 public:
@@ -9,6 +10,7 @@ public:
     void printCurrentList();
     void printHistory();
     void makeList(double[], int);
+    bool isEmpty();
     Operators(int sSize = 20)
     {
         ops = new Op *[sSize]();

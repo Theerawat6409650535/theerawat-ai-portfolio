@@ -23,3 +23,11 @@ However, I think I deallocated it as possible as I read in my code. By the way, 
 I keep doing it for a long time Today and so on. Finally, I think I should conclude those of learned things
 in a note/canva because the knowledges are distributing in my brain, so I should group them into something.
 I believe whenever I work hard, it eventually is beneficial for you. TFR!!!
+
+11 Sep 2025
+Today, I learned next level of using pointer in C++ such as pointer to pointer points to array in Heap,
+what difference of using pointer and pointer to pointer, how to access to every level of stored data in pointer.
+By the way, Nothing new Today because I'm take a lot of time for doing my homework, now it finished but not
+perfectly finished because I don't know what code in main.cpp, not in HW.pdf so I'm waiting for that.
+Finally, I miss to review math which means basic calculus, I think I should take time for it.
+Although I'm good at it, but I also should review it. TFR!!!  
