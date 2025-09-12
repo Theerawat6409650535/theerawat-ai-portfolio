@@ -18,15 +18,15 @@ void ModifiedLinkedList::add(double n)
     }
 }
 
-void ModifiedLinkedList::getData(double *&data, int &size)
+void ModifiedLinkedList::getData(double *&array, int &size)
 {
     size = counter;
-    data = new double[size];
+    array = new double[size];
     Node *node = head;
     int i = 0;
-    while (node->next)
+    while (node)
     {
-        data[i++] = node->data;
+        array[i++] = node->data;
         node = node->next;
     }
 }
@@ -34,53 +34,55 @@ void ModifiedLinkedList::getData(double *&data, int &size)
 ModifiedLinkedList *ModifiedLinkedList::clone()
 {
     ModifiedLinkedList *cloneObj = new ModifiedLinkedList();
-    double *data;
+    double *array;
     int size;
-    this->getData(data, size);
+    this->getData(array, size);
     for (int i = size - 1; i >= 0; i--)
     {
-        cloneObj->add(data[i]);
+        cloneObj->add(array[i]);
     }
-    delete[] data;
+    delete[] array;
     return cloneObj;
 }
 
 ModifiedLinkedList *ModifiedLinkedList::mergeWith(ModifiedLinkedList *obj)
 {
-    ModifiedLinkedList *objList = obj->clone();
-    ModifiedLinkedList *newList = this->clone();
-    Node *temp = objList->head;
+    ModifiedLinkedList *cloneObj = obj->clone();
+    ModifiedLinkedList *cloneThis = this->clone();
+    Node *temp = cloneObj->head;
     while (temp->next)
     {
         temp = temp->next;
     }
-    temp->next = newList->head;
-    newList->head = objList->head;
-    delete objList;
-    return newList;
+    temp->next = cloneThis->head;
+    cloneThis->head = cloneObj->head;
+    cloneThis->counter += cloneObj->counter;
+    cloneThis->mid = cloneThis->head;
+    for (int i = 1; i < round((cloneThis->counter) / 2.0); i++)
+    {
+        cloneThis->mid = cloneThis->mid->next;
+    }
+    delete cloneObj;
+    return cloneThis;
 }
 
 int ModifiedLinkedList::cut(int pos, ModifiedLinkedList *&part1, ModifiedLinkedList *&part2)
 {
-    ModifiedLinkedList *cloneList = this->clone();
-    ModifiedLinkedList *part1 = new ModifiedLinkedList();
-    ModifiedLinkedList *part2 = new ModifiedLinkedList();
-    Node *temp = cloneList->head;
-    part1->head = temp;
-    for (int i = 0; i < counter; i++)
+    double *array;
+    int size;
+    this->getData(array, size);
+    while (size)
     {
-        if (i == pos - 1)
+        if (size > pos)
         {
-            Node *tmpTemp = temp;
-            tmpTemp->next = NULL;
+            part2->add(array[--size]);
         }
-        else if (i == pos)
+        else
         {
-            part2->head = temp;
+            part1->add(array[--size]);
         }
-        temp = temp->next;
     }
-    delete cloneList;
+    delete[] array;
     return 0;
 }
 
@@ -91,7 +93,9 @@ void ModifiedLinkedList::removeAllNodes()
         Node *temp = head->next;
         delete head;
         head = temp;
+        counter--;
     }
+    mid = NULL;
 }
 
 void ModifiedLinkedList::print()

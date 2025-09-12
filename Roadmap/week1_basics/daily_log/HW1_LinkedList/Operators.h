@@ -1,6 +1,7 @@
 #ifndef OPERATORS_H
 #define OPERATORS_H
-
+#include <ostream>
+#include <string>
 class Operators
 {
 public:
@@ -22,11 +23,16 @@ public:
         maxTopLists = sSize;
         maxTopOps = sSize;
     }
+    ~Operators()
+    {
+        delete[] ops;
+        delete[] lists;
+    }
 
 protected:
     struct Op
     {
-        string op;
+        std::string op;
         int pos;
         Op(int position)
         {

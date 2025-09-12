@@ -92,8 +92,10 @@ ModifiedLinkedList class และ Operators class ตามลำดับ
     - removeAllNodes : คืนพื้นที่สมาชิกทุกตัว(ใน Heap)ของ linked list
         - loop จนกว่า head จะเท่ากับ NULL
             - สร้าง node มาเก็บตำแหน่งถัดไปของ head
-            - ลบ head ตำแหน่งปัจจุบัน
+            - ลบ head ตำแหน่งปัจจุบัน : คืนเนื้อสำหรับตำแหน่งที่ head ชี้ใน Heap 
             - เปลี่ยนตำแหน่ง head เป็นตำแหน่งเดียวกับ node : ตำแหน่งถัดไปจากตำแหน่ง head เดิม
+            - ลบจำนวนสมาชิก
+        - กำหนดให้ mid = NULL
         ตัวอย่าง
         loop 1
         [5] [4] [3] [2] [1] : head[5]/node[4]
