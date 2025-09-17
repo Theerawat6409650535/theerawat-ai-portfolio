@@ -16,3 +16,12 @@ in class again, and I felt more prepared than last time because I reviewed with 
 calculus instead of data structures, though I still need to solve problems on LeetCode as well.
     Finally, I have a sore throat because I reviewed several subjects—such as Python 
 and data structures & algorithms—by speaking with AI. TFR!!!
+
+17 Sep 2025
+    Today, I was pretty tired. I passed the quiz on data structures & algorithms 
+in class with a score of 8/10, and I felt better than last time, 
+although I think I could have done even better.
+    However, I missed reading calculus again. So tomorrow, 
+I will dedicate time to studying calculus instead of data structures, 
+though I still need to solve problems on LeetCode as well.
+    Finally, I will make sure to rest more. TFR!!
