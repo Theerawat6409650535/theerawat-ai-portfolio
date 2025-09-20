@@ -25,3 +25,10 @@ although I think I could have done even better.
 I will dedicate time to studying calculus instead of data structures, 
 though I still need to solve problems on LeetCode as well.
     Finally, I will make sure to rest more. TFR!!
+
+20 Sep 2025
+    Today, I learned about bitwise and square root without lib, such as faster find even/odd number by using bitwise,
+swap value by using bitwise and find square root by using bitwise or newton (babylonian). They make me so confused a lot
+but I have tried to learned it's algorithms for coding it into c++ code.
+    By the way, I waste 2 days for healing the brain and the body. Next week, I will get an exam at university and I think
+I should pass it with high score. However, I will try my best. TFR !!!

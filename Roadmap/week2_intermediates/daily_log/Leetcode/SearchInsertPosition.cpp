@@ -7,7 +7,7 @@ class Solution
 public:
     int searchInsert(vector<int> &nums, int target)
     {
-        // Linear search
+        // Linear search (O(n))
 
         // bool isFound = false;
         // int i=0;
@@ -19,10 +19,10 @@ public:
         //     i++;
         // }
 
-        // Binary search
+        // Binary search (O(log n))
 
         int low = 0;
-        int high = nums.size();
+        int high = nums.size() - 1;
         int mid = 0;
         while (high > low)
         {
@@ -34,7 +34,6 @@ public:
             else
                 return mid;
         }
-
-        return;
+        return target > nums[low] ? low + 1 : low;
     }
 };

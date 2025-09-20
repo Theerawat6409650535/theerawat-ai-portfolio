@@ -1,9 +1,14 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 int main()
 {
-    int i = 3;
-    cout << i / 2;
+    char a = '1';
+    char b = '0';
+    int c = (a) + (b) - '0';
+    string s = "Hello";
+    s = '!' + s;
+    cout << 3 % 2;
 }
